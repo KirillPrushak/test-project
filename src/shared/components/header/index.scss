@@ -1,0 +1,14 @@
+.header {
+  max-width: 1570px;
+  margin: auto;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 30px;
+  }
+}

@@ -1,0 +1,22 @@
+.logo-container {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  h3 {
+    color: #7653fc;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 6px;
+
+    span {
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+}
