@@ -1,0 +1,36 @@
+.footer {
+  max-width: 1570px;
+  margin: auto;
+  background-color: #7653fc;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .description-data {
+    }
+
+    .description-rules {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      .user {
+      }
+
+      .policy {
+      }
+    }
+  }
+}
