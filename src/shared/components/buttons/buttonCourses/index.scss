@@ -1,0 +1,20 @@
+.btn-courses {
+  background-color: #7653fc;
+  padding: 15px 30px;
+  border-radius: 8px;
+  transition: ease 0.5s color;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-courses:hover {
+  background-color: #8e76f0;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
