@@ -1,0 +1,92 @@
+.reviews {
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 40px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: start;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      p {
+        font-size: 16px;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .panel-reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .input-reviews {
+        display: flex;
+        gap: 20px;
+
+        input {
+          width: 220px;
+          height: 36px;
+          background-color: #ffffff;
+          color: #a4a4a4;
+          border-radius: 5px;
+          user-select: none;
+          border: none;
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+          padding: 6px;
+          outline: none;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: Arial;
+      resize: none;
+    }
+
+    .btn-reviews {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+
+      button {
+        background-color: #7653fc;
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 10px 30px;
+        transition: ease 0.5s color;
+        border: none;
+      }
+
+      button:hover {
+        background-color: #8e76f0;
+        cursor: pointer;
+        color: #000000;
+      }
+    }
+  }
+}
