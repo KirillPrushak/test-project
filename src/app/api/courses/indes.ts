@@ -1,8 +1,8 @@
-import { ICourses } from "../../../shared/types/courses";
+import { ICourses } from "../../../shared/api/courses";
 
 export async function GET(): Promise<ICourses[]> {
   try {
-    const response = await fetch("http://localhost:6080/data");
+    const response = await fetch("http://localhost:6080/courses");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -13,3 +13,5 @@ export async function GET(): Promise<ICourses[]> {
     throw error;
   }
 }
+
+// При рефакторинге необходимо удалить

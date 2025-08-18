@@ -2,7 +2,7 @@ import "./index.scss";
 
 function ButtonCourses() {
   return (
-    <a href="/data" className="btn-courses">
+    <a href="/courses" className="btn-courses">
       Выбрать курсы
     </a>
   );

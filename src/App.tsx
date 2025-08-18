@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./pages/layout";
 import WelcomePage from "./pages/welcome";
-import DataPage from "./pages/data";
+import CoursesPage from "./pages/courses";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,8 +14,8 @@ function App() {
           element: <WelcomePage />,
         },
         {
-          path: "/data",
-          element: <DataPage />,
+          path: "/courses",
+          element: <CoursesPage />,
         },
       ],
     },

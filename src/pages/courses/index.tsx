@@ -3,7 +3,7 @@ import Sidebar from "../../shared/sidebar";
 import "./index.scss";
 import Reviews from "../../shared/components/reviews/index";
 
-function DataPage() {
+function CoursesPage() {
   return (
     <div className="data">
       <div className="sidebar-section">
@@ -17,4 +17,4 @@ function DataPage() {
   );
 }
 
-export default DataPage;
+export default CoursesPage;
