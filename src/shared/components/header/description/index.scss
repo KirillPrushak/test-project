@@ -1,12 +1,15 @@
 .description-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 800px;
   width: 100%;
-  margin-left: 65px;
+  margin-top: 10px;
 
   .description {
-    p {
+    margin-left: 160px;
+
+    a {
       font-weight: 500;
       font-size: 26px;
     }

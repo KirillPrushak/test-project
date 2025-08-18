@@ -1,6 +1,7 @@
-import Card from "../../shared/components/card";
+import CoursesList from "../../shared/components/coursesList";
 import Sidebar from "../../shared/sidebar";
 import "./index.scss";
+import Reviews from "../../shared/components/reviews/index";
 
 function DataPage() {
   return (
@@ -9,16 +10,8 @@ function DataPage() {
         <Sidebar />
       </div>
       <div className="main-section">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <CoursesList />
+        <Reviews />
       </div>
     </div>
   );

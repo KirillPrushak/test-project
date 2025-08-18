@@ -5,7 +5,7 @@ function Description() {
   return (
     <div className="description-container">
       <div className="description">
-        <p>Курсы по выгодной цене</p>
+        <a href="/">Home</a>
       </div>
       <ButtonCourses />
     </div>
