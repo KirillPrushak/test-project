@@ -1,16 +1,35 @@
+import { useEffect, useState } from "react";
 import Card from "../card";
 import "./index.scss";
+import { ICourses } from "../../types/courses";
 
 function CoursesList() {
+  const [courses, setCourses] = useState<ICourses[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const response = await fetch("http://localhost:6080/data");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setCourses(data.courses);
+        console.log(data.courses);
+      } catch (error) {
+        console.log("Ошибка загрузки:", error);
+      }
+    };
+
+    loadData();
+  }, []);
+
   return (
     <div className="list">
       <div className="container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {courses.map((course) => (
+          <Card title={course.title} description={course.description} />
+        ))}
       </div>
     </div>
   );

@@ -1,11 +1,16 @@
 import "./index.scss";
 
-function Card() {
+export interface ICardProps {
+  title: string;
+  description: string;
+}
+
+function Card({ title, description }: ICardProps) {
   return (
     <div className="card">
       {/* <img src="" alt="" /> */}
-      <h3>Название курса</h3>
-      <p>Описание курса</p>
+      <h3>{title}</h3>
+      <p>{description}</p>
       <button>Учиться</button>
     </div>
   );
