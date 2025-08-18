@@ -1,0 +1,26 @@
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    gap: 50px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      list-style-type: none;
+      font-size: 30px;
+      font-weight: 500;
+
+      span {
+        width: 150px;
+      }
+    }
+  }
+}
