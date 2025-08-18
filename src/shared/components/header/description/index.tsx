@@ -1,3 +1,4 @@
+import ButtonCourses from "../../buttons/buttonCourses";
 import "./index.scss";
 
 function Description() {
@@ -6,9 +7,7 @@ function Description() {
       <div className="description">
         <p>Курсы по выгодной цене</p>
       </div>
-      <div className="btn-description">
-        <button>Все курсы</button>
-      </div>
+      <ButtonCourses />
     </div>
   );
 }

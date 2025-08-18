@@ -1,7 +1,7 @@
 .header {
-  max-width: 1570px;
-  margin: auto;
-  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
   background-color: #e5e5e5;
 
   .container {

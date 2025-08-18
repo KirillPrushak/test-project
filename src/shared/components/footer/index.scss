@@ -1,9 +1,8 @@
 .footer {
-  max-width: 1570px;
-  margin: auto;
+  width: 100%;
   background-color: #7653fc;
-  align-items: center;
-  justify-content: center;
+  bottom: 0;
+  position: sticky;
 
   .wrapper {
     display: flex;
