@@ -1,4 +1,3 @@
-import { ICourses } from "../../../api/courses";
 import "./index.scss";
 
 export interface IButtonAddProps {
@@ -7,13 +6,8 @@ export interface IButtonAddProps {
 }
 
 function ButtonAdd({ id, onSelect }: IButtonAddProps) {
-  const handleAddCourses = async (id: [number] | null | Partial<ICourses>) => {
-    console.log("Add course", id);
-  };
-
   return (
     <div className="button-add">
-      {/* {courses?.map((course) => ( */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -29,7 +23,6 @@ function ButtonAdd({ id, onSelect }: IButtonAddProps) {
           d="M12 4.5v15m7.5-7.5h-15"
         />
       </svg>
-      {/* ))} */}
     </div>
   );
 }

@@ -10,10 +10,14 @@ export interface ISedebarProps {
 function Sidebar({ setSelectedIdCourse }: ISedebarProps) {
   const { data: courses } = useGetCoursesQuery();
 
-  const handleSelecttCourse = (id: number) => {
-    setSelectedIdCourse((prev: number[]) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+  const handleAddCourse = (id: number) => {
+    setSelectedIdCourse(
+      (prev: number[]) => prev.filter((item) => item === id) && [...prev, id]
     );
+  };
+
+  const handleDeleteCourse = (id: number) => {
+    setSelectedIdCourse((prev: number[]) => prev.filter((item) => item !== id));
   };
 
   return (
@@ -24,39 +28,15 @@ function Sidebar({ setSelectedIdCourse }: ISedebarProps) {
             <span>{course.language}</span>
             <ButtonAdd
               id={course.id}
-              onSelect={() => handleSelecttCourse(course.id)}
+              onSelect={() => handleAddCourse(course.id)}
             />
-            <ButtonDelete />
+            <ButtonDelete
+              id={course.id}
+              onSelect={() => handleDeleteCourse(course.id)}
+            />
           </li>
         ))}
       </ul>
-      {/* <ul>
-        <li>
-          <span>Photoshop</span>
-          <ButtonAdd />
-          <ButtonDelete />
-        </li>
-        <li>
-          <span>AfterEffect</span>
-          <ButtonAdd />
-          <ButtonDelete />
-        </li>
-        <li>
-          <span>Frontend</span>
-          <ButtonAdd />
-          <ButtonDelete />
-        </li>
-        <li>
-          <span>Backend</span>
-          <ButtonAdd />
-          <ButtonDelete />
-        </li>
-        <li>
-          <span>Gamedev</span>
-          <ButtonAdd />
-          <ButtonDelete />
-        </li>
-      </ul> */}
     </div>
   );
 }
