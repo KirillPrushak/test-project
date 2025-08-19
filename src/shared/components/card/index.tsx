@@ -2,13 +2,29 @@ import "./index.scss";
 export interface ICardProps {
   title: string;
   description: string;
+  instructor: string;
+  duration: string;
+  price: number;
 }
 
-function Card({ title, description }: ICardProps) {
+function Card({ title, description, instructor, duration, price }: ICardProps) {
   return (
     <div className="card">
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className="description">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <p>Преподаватель: {instructor}</p>
+      <div className="container-change">
+        <p>
+          Длительность:
+          <span> {duration}</span>
+        </p>
+        <p>
+          Стоимость:
+          <span> {price}</span>
+        </p>
+      </div>
       <img src="/card/editing.png" alt="" />
     </div>
   );
