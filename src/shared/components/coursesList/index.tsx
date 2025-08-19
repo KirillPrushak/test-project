@@ -4,7 +4,11 @@ import "./index.scss";
 import { ICourses } from "../../api/courses";
 import { useGetCoursesQuery } from "../../../features/api/coursesApi";
 
-function CoursesList() {
+export interface ICoursesListProps {
+  selectedIdCourse: number[];
+}
+
+function CoursesList({ selectedIdCourse }: ICoursesListProps) {
   // const [courses, setCourses] = useState<ICourses[]>([]);
 
   // useEffect(() => {
@@ -30,14 +34,28 @@ function CoursesList() {
   if (isLoading) return <div>Загрузка...</div>;
   if (error) return <div>Ошибка загрузки</div>;
   if (!courses?.length) return <div>Курсы не найдены</div>;
+  const selectedCourse = courses?.filter((course) =>
+    selectedIdCourse.includes(course.id)
+  );
 
   return (
     <div className="list">
-      <div className="container">
+      {selectedCourse && (
+        <div className="container">
+          {selectedCourse.map((course) => (
+            <Card key={course.id} {...course} />
+          ))}
+        </div>
+      )}
+      {/* <div className="container">
         {courses.map((course) => (
-          <Card title={course.title} description={course.description} />
+          <Card
+            key={course.id}
+            title={course.title}
+            description={course.description}
+          />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
