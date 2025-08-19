@@ -1,5 +1,4 @@
 import "./index.scss";
-
 export interface ICardProps {
   title: string;
   description: string;
@@ -8,10 +7,9 @@ export interface ICardProps {
 function Card({ title, description }: ICardProps) {
   return (
     <div className="card">
-      {/* <img src="" alt="" /> */}
       <h3>{title}</h3>
       <p>{description}</p>
-      <button>Учиться</button>
+      <img src="/card/editing.png" alt="" />
     </div>
   );
 }
