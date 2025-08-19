@@ -39,4 +39,29 @@
     width: 48px;
     height: 48px;
   }
+
+  .toggle-change {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: 10px 30px;
+      border-radius: 8px;
+      border: none;
+      background-color: #7653fc;
+      color: #ffffff;
+      transition: ease 0.5s color;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background-color: #8e76f0;
+      cursor: pointer;
+      color: #000000;
+    }
+  }
 }

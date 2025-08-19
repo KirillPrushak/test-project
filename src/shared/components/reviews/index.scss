@@ -59,21 +59,6 @@
       align-items: center;
       justify-content: start;
       gap: 10px;
-
-      button {
-        background-color: #7653fc;
-        color: #ffffff;
-        border-radius: 8px;
-        padding: 10px 30px;
-        transition: ease 0.5s color;
-        border: none;
-      }
-
-      button:hover {
-        background-color: #8e76f0;
-        cursor: pointer;
-        color: #000000;
-      }
     }
   }
 }

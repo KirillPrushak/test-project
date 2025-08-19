@@ -1,3 +1,4 @@
+import ButtonSend from "../buttons/ButtonSend";
 import "./index.scss";
 
 function Reviews() {
@@ -30,7 +31,7 @@ function Reviews() {
           </div>
           <textarea placeholder="Оставьте отзыв"></textarea>
           <div className="btn-reviews">
-            <button>Отправить</button>
+            <ButtonSend />
             <p>
               * Перед публикацией отзыв пройдет предварительную модерацию и
               проверку
