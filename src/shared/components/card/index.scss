@@ -28,7 +28,7 @@
     border-radius: 8px;
     padding: 8px;
 
-    span {
+    .price {
       font-weight: bold;
       font-size: 26px;
       color: rgb(226, 54, 31);
@@ -46,6 +46,19 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
+
+    select {
+      width: 100px;
+      padding: 8px;
+      border-radius: 8px;
+
+      option {
+        padding: 8px;
+        background-color: #ffffff;
+        color: F000000;
+      }
+    }
 
     button {
       padding: 10px 30px;
