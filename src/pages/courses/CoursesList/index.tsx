@@ -23,17 +23,22 @@ function CoursesList({ selectedIdCourse, isOpen }: ICoursesListProps) {
 
   return (
     <div className="list">
-      {selectedCourse && (
-        <div className="container">
-          {selectedCourse.map((course) => (
-            <Card
-              key={course.id}
-              {...course}
-              onDelete={() => handleOpenModal(course.id)}
-            />
-          ))}
-        </div>
-      )}
+      <div className="description">
+        <h1>Выбранные курсы</h1>
+      </div>
+      <div className="wrapper">
+        {selectedCourse && (
+          <div className="container">
+            {selectedCourse.map((course) => (
+              <Card
+                key={course.id}
+                {...course}
+                onDelete={() => handleOpenModal(course.id)}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

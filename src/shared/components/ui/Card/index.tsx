@@ -45,7 +45,7 @@ function Card({
         </p>
       </div>
       {!isActiveToggle ? (
-        <div className="toggle-change">
+        <div className="toggle-chang">
           <img
             src="/card/editing.png"
             alt="editing"
