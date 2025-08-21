@@ -1,5 +1,6 @@
-import Description from "./description";
-import Logo from "./logo";
+import Description from "../../ui/Description";
+import Logo from "../../ui/Logo";
+
 import "./index.scss";
 
 function Header() {

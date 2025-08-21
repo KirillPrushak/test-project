@@ -1,12 +1,8 @@
-import { useGetCoursesQuery } from "../../features/api/coursesApi";
-import ButtonAdd from "../components/buttons/buttonAdd";
-import ButtonDelete from "../components/buttons/buttonDelete";
+import { useGetCoursesQuery } from "../../../../features/api/coursesApi";
+import ButtonAdd from "../../ui/Buttons/ButtonAdd";
+import ButtonDelete from "../../ui/Buttons/ButtonDelete";
 import "./index.scss";
-
-export interface ISedebarProps {
-  setSelectedIdCourse: (update: (prev: number[]) => number[]) => void;
-  isOpen: () => void;
-}
+import { ISedebarProps } from "./type";
 
 function Sidebar({ setSelectedIdCourse, isOpen }: ISedebarProps) {
   const { data: courses } = useGetCoursesQuery();

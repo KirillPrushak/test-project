@@ -1,4 +1,4 @@
-import ButtonSend from "../buttons/ButtonSend";
+import ButtonSend from "../Buttons/ButtonSend";
 import "./index.scss";
 
 function Reviews() {

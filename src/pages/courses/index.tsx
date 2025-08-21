@@ -1,10 +1,9 @@
-import CoursesList from "../../shared/components/coursesList";
-import Sidebar from "../../shared/sidebar";
 import "./index.scss";
-import Reviews from "../../shared/components/reviews/index";
 import { useState } from "react";
-import Modal from "../../shared/components/Modal";
-import { CourseProvider } from "../../shared/context";
+import CoursesList from "./CoursesList";
+import Modal from "../../shared/components/ui/Modal";
+import Sidebar from "../../shared/components/layout/Sidebar";
+import Reviews from "../../shared/components/ui/Reviews";
 
 function CoursesPage() {
   const [selectedIdCourse, setSelectedIdCourse] = useState<number[]>([]);
@@ -31,31 +30,29 @@ function CoursesPage() {
   };
 
   return (
-    <CourseProvider>
-      <div className="data">
-        <Modal
-          isOpen={isModal}
-          onClose={handleCloseModal}
-          onConfirm={handleConfirmDelete}
-        />
-        <div className="container">
-          <div className="sidebar-section">
-            <Sidebar
-              setSelectedIdCourse={setSelectedIdCourse}
-              isOpen={() => handleOpenModal(0)}
-            />
-          </div>
-          <div className="main-section">
-            <CoursesList
-              selectedIdCourse={selectedIdCourse}
-              setSelectedIdCourse={setSelectedIdCourse}
-              isOpen={(id) => handleOpenModal(id)}
-            />
-            <Reviews />
-          </div>
+    <div className="data">
+      <Modal
+        isOpen={isModal}
+        onClose={handleCloseModal}
+        onConfirm={handleConfirmDelete}
+      />
+      <div className="container">
+        <div className="sidebar-section">
+          <Sidebar
+            setSelectedIdCourse={setSelectedIdCourse}
+            isOpen={() => handleOpenModal(0)}
+          />
+        </div>
+        <div className="main-section">
+          <CoursesList
+            selectedIdCourse={selectedIdCourse}
+            setSelectedIdCourse={setSelectedIdCourse}
+            isOpen={(id) => handleOpenModal(id)}
+          />
+          <Reviews />
         </div>
       </div>
-    </CourseProvider>
+    </div>
   );
 }
 

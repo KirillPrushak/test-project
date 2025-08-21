@@ -1,18 +1,10 @@
 import "./index.scss";
 import { useGetCoursesQuery } from "../../../features/api/coursesApi";
-import Card from "../card";
 import { useState } from "react";
-export interface ICoursesListProps {
-  selectedIdCourse: number[];
-  setSelectedIdCourse: (update: (prev: number[]) => number[]) => void;
-  isOpen: (id: number) => void;
-}
+import Card from "../../../shared/components/ui/Card";
+import { ICoursesListProps } from "./type";
 
-function CoursesList({
-  selectedIdCourse,
-  setSelectedIdCourse,
-  isOpen,
-}: ICoursesListProps) {
+function CoursesList({ selectedIdCourse, isOpen }: ICoursesListProps) {
   const { data: courses, isLoading, error } = useGetCoursesQuery();
   const [courseToDelete, setCourseToDelete] = useState<number | null>(null);
 

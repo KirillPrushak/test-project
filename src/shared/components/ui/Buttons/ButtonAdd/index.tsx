@@ -1,9 +1,5 @@
 import "./index.scss";
-
-export interface IButtonAddProps {
-  id: any;
-  onSelect: (id: [number] | null) => void;
-}
+import { IButtonAddProps } from "./type";
 
 function ButtonAdd({ id, onSelect }: IButtonAddProps) {
   return (

@@ -1,4 +1,4 @@
-import ButtonCourses from "../../shared/components/buttons/buttonCourses";
+import ButtonCourses from "../../shared/components/ui/Buttons/ButtonCourses";
 import "./index.scss";
 
 function WelcomePage() {

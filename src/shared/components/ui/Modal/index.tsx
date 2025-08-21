@@ -1,11 +1,6 @@
 // import { useCourseContext } from "../../context";
 import "./index.scss";
-
-export interface IModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onConfirm: () => void;
-}
+import { IModalProps } from "./type";
 
 function Modal({ isOpen, onClose, onConfirm }: IModalProps) {
   if (!isOpen) return null;

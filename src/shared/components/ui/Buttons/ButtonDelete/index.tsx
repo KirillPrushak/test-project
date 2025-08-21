@@ -1,10 +1,5 @@
 import "./index.scss";
-
-export interface IButtonDeleteProps {
-  id: any;
-  onSelect: (id: [number] | null) => void;
-  isOpen: () => void;
-}
+import { IButtonDeleteProps } from "./type";
 
 function ButtonDelete({ id, onSelect, isOpen }: IButtonDeleteProps) {
   return (

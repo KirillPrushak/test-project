@@ -1,4 +1,4 @@
-import ButtonCourses from "../../buttons/buttonCourses";
+import ButtonCourses from "../Buttons/ButtonCourses";
 import "./index.scss";
 
 function Description() {

@@ -1,14 +1,6 @@
 import { SetStateAction, useState } from "react";
 import "./index.scss";
-export interface ICardProps {
-  title: string;
-  description: string;
-  instructor: string;
-  duration: string;
-  price: number;
-  id: number;
-  onDelete: any;
-}
+import { ICardProps } from "./type";
 
 function Card({
   title,
