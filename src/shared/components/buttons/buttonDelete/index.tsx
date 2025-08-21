@@ -3,9 +3,10 @@ import "./index.scss";
 export interface IButtonDeleteProps {
   id: any;
   onSelect: (id: [number] | null) => void;
+  isOpen: () => void;
 }
 
-function ButtonDelete({ id, onSelect }: IButtonDeleteProps) {
+function ButtonDelete({ id, onSelect, isOpen }: IButtonDeleteProps) {
   return (
     <div className="button-add">
       <svg
@@ -16,6 +17,7 @@ function ButtonDelete({ id, onSelect }: IButtonDeleteProps) {
         stroke="currentColor"
         className="minus-icon"
         onClick={() => onSelect(id)}
+        // onClick={isOpen}
       >
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
       </svg>

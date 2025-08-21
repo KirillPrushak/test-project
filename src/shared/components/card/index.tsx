@@ -1,27 +1,27 @@
 import { SetStateAction, useState } from "react";
 import "./index.scss";
-import ButtonSend from "../buttons/ButtonSend";
 export interface ICardProps {
   title: string;
   description: string;
   instructor: string;
   duration: string;
   price: number;
+  id: number;
+  onDelete: any;
 }
 
-function Card({ title, description, instructor, duration, price }: ICardProps) {
+function Card({
+  title,
+  description,
+  instructor,
+  duration,
+  price,
+  onDelete,
+}: ICardProps) {
   const [isActiveToggle, setIsToggleActive] = useState<boolean>(false);
   const [switchDuration, setSwitchDuration] = useState<string>(duration);
-  const [switchPrice, setSwitchPrice] = useState<number>(price);
 
-  // const numberMount = switchDuration.match(/\d+/);
   const numberCurrentMount = parseInt(switchDuration[0]);
-  const currentPriceForOneMount = price / numberCurrentMount;
-  const currentPriceForSelectMount =
-    currentPriceForOneMount * numberCurrentMount;
-
-  console.log(switchDuration[0]);
-  console.log(currentPriceForOneMount);
 
   const handleSwitchDuration = () => {
     setIsToggleActive(!isActiveToggle);
@@ -59,7 +59,7 @@ function Card({ title, description, instructor, duration, price }: ICardProps) {
             alt="editing"
             onClick={handleSwitchDuration}
           />
-          {/* <ButtonSend /> */}
+          <img src="/modal/delete.png" alt="delete" onClick={onDelete} />
         </div>
       ) : (
         <div className="toggle-change">

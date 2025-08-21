@@ -5,11 +5,19 @@
   width: 100%;
   height: 100%;
 
-  .sidebar-section {
-    flex: 1;
-  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 
-  .main-section {
-    flex: 3;
+    .sidebar-section {
+      flex: 1;
+    }
+
+    .main-section {
+      flex: 3;
+    }
   }
 }

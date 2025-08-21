@@ -4,9 +4,9 @@ import "./index.scss";
 function Reviews() {
   return (
     <div className="reviews">
-      <div className="container">
+      <div className="reviews-container">
         <div className="user">
-          <img src="reviews/user.svg" alt="" />
+          <img src="reviews/user.svg" alt="user" />
           <p>
             <span>Василий Васильев: </span>Что вас ждет в этом курсе?
           </p>

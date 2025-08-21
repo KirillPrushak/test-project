@@ -42,10 +42,10 @@
 
   .toggle-change {
     display: flex;
-    flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
 
     select {
