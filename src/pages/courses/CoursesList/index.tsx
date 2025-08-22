@@ -28,7 +28,7 @@ function CoursesList({ selectedIdCourse, isOpen }: ICoursesListProps) {
       </div>
       <div className="wrapper">
         {selectedCourse && (
-          <div className="container">
+          <div className="list-container">
             {selectedCourse.map((course) => (
               <Card
                 key={course.id}
