@@ -8,6 +8,8 @@ function CoursesList({ selectedIdCourse, isOpen }: ICoursesListProps) {
   const { data: courses, isLoading, error } = useGetCoursesQuery();
   const [courseToDelete, setCourseToDelete] = useState<number | null>(null);
 
+  console.log(courseToDelete);
+
   const handleOpenModal = (id: number) => {
     setCourseToDelete(id);
     isOpen(id);

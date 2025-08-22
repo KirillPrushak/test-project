@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function useTimer(
   initialTime: number = 5,
@@ -7,6 +7,11 @@ function useTimer(
 ) {
   const [timer, setTimer] = useState<number>(initialTime);
   const [isRunning, setIsRunning] = useState<boolean>(isOpen);
+
+  const restart = useCallback(() => {
+    setTimer(initialTime);
+    setIsRunning(true);
+  }, [initialTime]);
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout | null = null;
@@ -27,19 +32,15 @@ function useTimer(
     };
   }, [timer, isRunning, onClose]);
 
-  const restart = () => {
-    setTimer(initialTime);
-    setIsRunning(true);
-  };
-
   useEffect(() => {
     if (isOpen) {
       restart();
     }
-  }, [isOpen]);
+  }, [isOpen, restart]);
 
   return {
     timer,
+    restart,
   };
 }
 
