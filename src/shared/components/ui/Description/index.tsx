@@ -6,8 +6,8 @@ function Description() {
     <div className="description-container">
       <div className="description">
         <a href="/">Home</a>
+        {/* <ButtonCourses /> */}
       </div>
-      <ButtonCourses />
     </div>
   );
 }

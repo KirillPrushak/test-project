@@ -26,15 +26,17 @@ function Sidebar({ setSelectedIdCourse, isOpen }: ISedebarProps) {
         {courses?.map((course) => (
           <li key={course.id}>
             <span>{course.language}</span>
-            <ButtonAdd
-              id={course.id}
-              onSelect={() => handleAddCourse(course.id)}
-            />
-            <ButtonDelete
-              isOpen={isOpen}
-              id={course.id}
-              onSelect={() => handleDeleteCourse(course.id)}
-            />
+            <div className="sidebar-btns">
+              <ButtonAdd
+                id={course.id}
+                onSelect={() => handleAddCourse(course.id)}
+              />
+              <ButtonDelete
+                isOpen={isOpen}
+                id={course.id}
+                onSelect={() => handleDeleteCourse(course.id)}
+              />
+            </div>
           </li>
         ))}
       </ul>

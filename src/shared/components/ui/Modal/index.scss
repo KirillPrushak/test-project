@@ -1,3 +1,5 @@
+@import "../../../../styles/responsive.scss";
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,14 @@
   border-radius: 8px;
   background-color: rgb(136, 245, 200);
   z-index: 1000;
-  position: fixed;
+  position: absolute;
+
+  @include sm {
+    width: 450px;
+    height: 300px;
+    top: auto;
+    position: absolute;
+  }
 
   .timer-comtainer {
     font-size: 26px;

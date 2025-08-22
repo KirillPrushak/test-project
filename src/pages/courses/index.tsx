@@ -30,13 +30,13 @@ function CoursesPage() {
   };
 
   return (
-    <div className="data">
+    <div className="courses">
       <Modal
         isOpen={isModal}
         onClose={handleCloseModal}
         onConfirm={handleConfirmDelete}
       />
-      <div className="container">
+      <div className="container-courses">
         <div className="sidebar-section">
           <Sidebar
             setSelectedIdCourse={setSelectedIdCourse}

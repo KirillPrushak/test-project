@@ -1,16 +1,22 @@
-.data {
+@import "../../styles/responsive.scss";
+
+.courses {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
 
-  .container {
+  .container-courses {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+
+    @include sm {
+      display: inline;
+    }
 
     .sidebar-section {
       flex: 1;
@@ -18,6 +24,7 @@
 
     .main-section {
       flex: 3;
+      padding: 50px;
     }
   }
 }

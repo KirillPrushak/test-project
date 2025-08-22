@@ -5,7 +5,9 @@ function WelcomePage() {
   return (
     <div className="welcome-page">
       <div className="welcom-container">
-        <h1>Добро пожаловать на платформу для обучения!</h1>
+        <div className="welcome">
+          <h1>Добро пожаловать на платформу для обучения!</h1>
+        </div>
         <div className="main-text">
           <h3>
             Здесь вас ждут актуальные курсы от экспертов, гибкий график занятий
@@ -14,9 +16,15 @@ function WelcomePage() {
             Начните свой образовательный путь прямо сейчас!
           </h3>
           <div className="details">
-            <p>Документ об окончании - Диплом</p>
-            <p>Сложность - начальная</p>
-            <p>Длительность - 5 месяцев</p>
+            <p>
+              Документ об окончании - <span>Диплом</span>
+            </p>
+            <p>
+              Сложность - <span>начальная</span>
+            </p>
+            <p>
+              Длительность - <span>5 месяцев</span>
+            </p>
           </div>
         </div>
         <ButtonCourses />

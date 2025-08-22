@@ -1,3 +1,5 @@
+@import "../../../../styles/responsive.scss";
+
 .sidebar {
   display: flex;
   align-items: center;
@@ -9,6 +11,11 @@
     left: 0;
     gap: 50px;
 
+    @include sm {
+      flex-direction: row;
+      gap: 80px;
+    }
+
     li {
       display: flex;
       align-items: center;
@@ -18,8 +25,26 @@
       font-size: 30px;
       font-weight: 500;
 
+      @include sm {
+        flex-direction: column;
+      }
+
       span {
         width: 150px;
+
+        @include sm {
+          width: 100%;
+          font-size: 20px;
+        }
+      }
+
+      .sidebar-btns {
+        display: flex;
+        gap: 20px;
+
+        @include sm {
+          gap: 50px;
+        }
       }
     }
   }

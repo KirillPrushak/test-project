@@ -1,13 +1,28 @@
+@import "../../../../styles//responsive.scss";
+
 .description-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 800px;
-  width: 100%;
-  margin-top: 10px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // gap: 750px;
+  // width: 100%;
+  // margin-top: 10px;
+  // margin-right: 100px;
+
+  // @include sm {
+  //   gap: 20px;
+  //   margin-right: 10px;
+  // }
 
   .description {
-    margin-left: 160px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // margin-left: 160px;
+
+    // @include sm {
+    //   margin-left: 50px;
+    // }
 
     a {
       font-weight: 500;

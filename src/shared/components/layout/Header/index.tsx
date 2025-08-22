@@ -6,7 +6,7 @@ import "./index.scss";
 function Header() {
   return (
     <header className="header">
-      <div className="container">
+      <div className="header-container">
         <Logo />
         <Description />
       </div>

@@ -14,6 +14,7 @@ function Card({
   const [switchDuration, setSwitchDuration] = useState<string>(duration);
 
   const numberCurrentMount = parseInt(switchDuration[0]);
+  const priceForOneMount = Math.floor(price / parseInt(duration[0]));
 
   const handleSwitchDuration = () => {
     setIsToggleActive(!isActiveToggle);
@@ -41,7 +42,7 @@ function Card({
         </p>
         <p>
           Стоимость:
-          <span> {numberCurrentMount * (price / parseInt(duration[0]))}₽</span>
+          <span> {numberCurrentMount * priceForOneMount}₽</span>
         </p>
       </div>
       {!isActiveToggle ? (

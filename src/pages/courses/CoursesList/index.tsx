@@ -23,7 +23,7 @@ function CoursesList({ selectedIdCourse, isOpen }: ICoursesListProps) {
 
   return (
     <div className="list">
-      <div className="description">
+      <div className="list-description">
         <h1>Выбранные курсы</h1>
       </div>
       <div className="wrapper">

@@ -3,7 +3,7 @@ import { IButtonDeleteProps } from "./type";
 
 function ButtonDelete({ id, onSelect, isOpen }: IButtonDeleteProps) {
   return (
-    <div className="button-add">
+    <div className="button-delete">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

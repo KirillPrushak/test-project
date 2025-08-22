@@ -1,10 +1,16 @@
+@import "../../styles//responsive.scss";
+
 .layout {
   min-height: 100vh;
-  display: flex;
-  max-width: 1570px;
-  margin: auto;
+  width: 1570px;
+  margin: 0 auto;
   background-color: #e5e5e5;
   align-items: center;
   justify-content: space-between;
+  display: flex;
   flex-direction: column;
+
+  @include sm {
+    max-width: 768px;
+  }
 }

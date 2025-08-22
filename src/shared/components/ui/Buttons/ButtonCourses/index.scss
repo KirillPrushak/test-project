@@ -1,3 +1,5 @@
+@import "../../../../../styles/responsive.scss";
+
 .btn-courses {
   background-color: #7653fc;
   padding: 15px 30px;
@@ -9,6 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
+
+  @include sm {
+    padding: 8px 10px;
+  }
 }
 
 .btn-courses:hover {
