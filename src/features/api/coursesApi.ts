@@ -1,9 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { ICourses } from "../../types/courses";
 
+const API_URL =
+  process.env.REACT_APP_API_URL === "production"
+    ? "http://test-server-mysql-production.up.railway.app"
+    : "http://localhost:8080/";
+
 export const coursesApi = createApi({
   reducerPath: "coursesApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:6080/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   endpoints: (builder) => ({
     getCourses: builder.query<ICourses[], void>({
       query: () => "/courses",
