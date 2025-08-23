@@ -9,6 +9,7 @@ const API_URL =
 export const coursesApi = createApi({
   reducerPath: "coursesApi",
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
+
   endpoints: (builder) => ({
     getCourses: builder.query<ICourses[], void>({
       query: () => "/courses",
