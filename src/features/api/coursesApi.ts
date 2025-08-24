@@ -1,9 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { ICourses } from "../../types/courses";
 
+console.log('1111', process.env.REACT_APP_API_URL)
+
 const API_URL =
   process.env.REACT_APP_API_URL === "production"
-    ? "http://test-server-mysql-production.up.railway.app"
+    ? "https://test-server-mysql-production.up.railway.app"
     : "http://localhost:8080/";
 
 export const coursesApi = createApi({
